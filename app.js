@@ -14,7 +14,7 @@ app.use('*', (req,res) => {
   res
     .set('x-powered-by', 'cyclic.sh')
     .json({
-      msg: "Great Demo!",
+      msg: "Have a great day!",
       at: new Date().toISOString(),
       method: req.method,
       hostname: req.hostname,
