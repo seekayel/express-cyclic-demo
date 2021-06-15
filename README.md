@@ -11,8 +11,8 @@ Implements the Expressjs Hello World example to provide a faster start deploying
 ## Running
 
 - `npm start`
-- Browser: `http://localhost:3443/some/path?q=query+one&q=second+query&single=value`
-- Commandline: `curl -i -XGET "http://localhost:3443/cmd/line-curl"`
+- Browser: `http://localhost:3000/some/path?q=query+one&q=second+query&single=value`
+- Commandline: `curl -i -XGET "http://localhost:3000/cmd/line-curl"`
 
 ## Cyclic Runtime
 
