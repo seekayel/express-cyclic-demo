@@ -11,8 +11,7 @@ app.get('/', (req, res) => {
 
 app.use('*', (req,res) => {
   console.log('[hello-world] Star handler called')
-  res
-    .set('x-powered-by', 'cyclic.sh')
+  res.set('x-powered-by', 'cyclic.sh')
     .json({
       msg: "Have a great day!",
       at: new Date().toISOString(),
