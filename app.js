@@ -13,7 +13,7 @@ app.use('*', (req,res) => {
   console.log('[hello-world] Star handler called')
   res.set('x-powered-by', 'cyclic.sh')
     .json({
-      msg: "Have a great day!",
+      msg: "Thanks for playing!",
       at: new Date().toISOString(),
       method: req.method,
       hostname: req.hostname,
