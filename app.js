@@ -1,12 +1,26 @@
 const express = require('express')
 const app = express()
 
-app.get('/', (req, res) => {
-  console.log('[hello-world] root handler called')
-  res
-    .set('x-powered-by', 'cyclic.sh')
-    .send(`<h1>Hello World!</h1><p>at: ${new Date().toISOString()}</p>`)
-    .end()
+var options = {
+  dotfiles: 'ignore',
+  etag: false,
+  extensions: ['htm', 'html','css','js','ico','jpg','jpeg','png','svg'],
+  index: ['index.html'],
+  maxAge: '1d',
+  redirect: false,
+  setHeaders: function (res, path, stat) {
+    res.set('x-timestamp', Date.now())
+  }
+}
+
+app.use(express.static('public', options))
+
+app.get('/hello.json', (req,res) => {
+  res.json({
+    Hello: ['Hola', 'Hello', 'Привет', '你好', 'こんにちは'],
+    World: ['🌎', '🌍','🌏','🗺','🌐'],
+    at: new Date().toISOString()
+  })
 })
 
 app.use('*', (req,res) => {
