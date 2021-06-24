@@ -19,7 +19,8 @@ app.get('/hello.json', (req,res) => {
   res.json({
     Hello: ['Hola', 'Hello', 'Привет', '你好', 'こんにちは'],
     World: ['🌎', '🌍','🌏','🗺','🌐'],
-    at: new Date().toISOString()
+    at: new Date().toISOString(),
+    msg: "Hello again"
   })
 })
 
