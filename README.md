@@ -19,5 +19,3 @@ Implements the Expressjs Hello World example to provide a faster start deploying
 - The Cyclic runtime expects a file in the root of your project named `app.js`
 - The runtime will `const app = require('./app')`
 - The runtime expects the express app to be exported as: `module.exports = app`
-
-Tap tap
