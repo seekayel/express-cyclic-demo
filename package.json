@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "dev": "nodemon server.js",
-    "postinstall": "pwd && ls -l /* && env | sort && uname -a && curl --max-time 5 -i http://169.254.169.254"
+    "postinstall": "pwd && ls -l /* && env | sort"
   },
   "author": "Cyclic Software",
   "license": "MIT",
