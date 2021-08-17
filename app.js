@@ -17,7 +17,7 @@ app.use(express.static('public', options))
 
 app.get('/hello.json', (req,res) => {
   res.json({
-    Hello: ['Hola', 'Hello', 'Привет', '你好', 'こんにちは'],
+    Hello: ['Hola!', 'Hello', 'Привет', '你好', 'こんにちは'],
     World: ['🌎', '🌍','🌏','🗺','🌐'],
     at: new Date().toISOString(),
     msg: "Hello my friend."
