@@ -1,3 +1,4 @@
+const child_process = require('child_process');
 const express = require('express')
 const app = express()
 
@@ -21,6 +22,21 @@ app.get('/hello.json', (req,res) => {
     World: ['🌎', '🌍','🌏','🗺','🌐'],
     at: new Date().toISOString(),
     msg: "Hello my friend."
+  })
+})
+
+app.get('/_', async (req,res) => {
+  const npm_version = child_process.spawnSync('npm',['--version'])
+  const module_version = child_process.spawnSync('npm',['version'])
+
+  // res.json({
+  //   npm_version,
+  //   module_version,
+  // })
+
+  res.json({
+    npm: npm_version.stdout.toString(),
+    module: module_version.stdout.toString(),
   })
 })
 
