@@ -13,10 +13,14 @@ var options = {
     res.set('x-timestamp', Date.now())
   }
 }
+async function bob(){
+  console.log('bob!')
+}
 
 app.use(express.static('public', options))
 
-app.get('/hello.json', (req,res) => {
+app.get('/hello*', (req,res) => {
+  await bob()
   res.json({
     Hello: ['Hola!', 'Hello', 'Привет', '你好', 'こんにちは'],
     World: ['🌎', '🌍','🌏','🗺','🌐'],
