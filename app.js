@@ -36,7 +36,7 @@ app.get('/_', async (req,res) => {
 })
 
 app.use('*', (req,res) => {
-  console.log('[hello-world] Star handler called')
+  console.log('* handler called')
   res
     .set('x-powered-by', 'cyclic.sh')
     .set('content-type', 'application/json')
