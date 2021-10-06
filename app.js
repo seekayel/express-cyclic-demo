@@ -25,15 +25,15 @@ app.get('/hello*', (req,res) => {
   })
 })
 
-app.get('/_', async (req,res) => {
-  const npm_version = child_process.spawnSync('npm',['--version'])
-  const module_version = child_process.spawnSync('npm',['version'])
+// app.get('/_', async (req,res) => {
+//   const npm_version = child_process.spawnSync('npm',['--version'])
+//   const module_version = child_process.spawnSync('npm',['version'])
 
-  res.json({
-    npm: npm_version.stdout.toString(),
-    module: module_version.stdout.toString(),
-  })
-})
+//   res.json({
+//     npm: npm_version.stdout.toString(),
+//     module: module_version.stdout.toString(),
+//   })
+// })
 
 app.use('*', (req,res) => {
   console.log('* handler called')
