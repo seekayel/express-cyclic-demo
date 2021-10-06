@@ -36,7 +36,7 @@ app.get('/hello*', (req,res) => {
 // })
 
 app.use('*', (req,res) => {
-  console.log('* handler called')
+  console.log(`${req.method} ${req.params[0]}`)
   res
     .set('x-powered-by', 'cyclic.sh')
     .set('content-type', 'application/json')
