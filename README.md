@@ -22,5 +22,3 @@ Implements the Expressjs Hello World example to provide a faster start deploying
 - Thats it!
 
 Let us know what you think: https://www.cyclic.sh
-
-Thanks!
