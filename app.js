@@ -17,7 +17,7 @@ var options = {
 app.use(express.static('public', options))
 
 app.get('/hello*', (req,res) => {
-  console.log('saying hello')
+  console.log('said hello')
   res.json({
     Hello: ['Hola!', 'Hello', 'Привет', '你好', 'こんにちは'],
     World: ['🌎', '🌍','🌏','🗺','🌐'],
