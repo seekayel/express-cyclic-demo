@@ -17,11 +17,12 @@ var options = {
 app.use(express.static('public', options))
 
 app.get('/hello*', (req,res) => {
+  console.log('saying hello')
   res.json({
     Hello: ['Hola!', 'Hello', 'Привет', '你好', 'こんにちは'],
     World: ['🌎', '🌍','🌏','🗺','🌐'],
     at: new Date().toISOString(),
-    msg: "Hello my friend."
+    msg: "Hello my friend"
   })
 })
 
